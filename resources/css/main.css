@@ -43,7 +43,7 @@ a:visited {
     min-height: 100%;
 }
 
-header {
+.login-header {
     text-align: center;
     padding: 10px 0;
 }
@@ -116,11 +116,29 @@ footer {
 
 /*-----end of login page-----*/
 
-/*-----start of home page-----*/
+/* -----start of header styles----- */
 
-.logged-inside {
-    
+.common-header {
+    display: flex;
 }
+
+.common-header div {
+    flex: 33%;
+}
+
+.common-header .office-logo img {
+    margin: 10px 0 0 250px;
+}
+
+.common-header .office-name p {
+    margin: auto;
+    text-align: center;
+    font-weight: 800;
+}
+
+/* -----end of header styles----- */
+
+/*-----start of home page-----*/
 
 .home-text h2 {
     text-align: center;
@@ -144,3 +162,4 @@ footer {
 
 
 /*-----end of home page-----*/
+
