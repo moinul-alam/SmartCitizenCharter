@@ -140,7 +140,7 @@ footer {
 
 /*-----start of home page-----*/
 
-.home-text h2 {
+.home-text h2, .content-title h2 {
     text-align: center;
 }
 
