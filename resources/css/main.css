@@ -1,0 +1,146 @@
+* {
+	box-sizing: border-box;
+	font-family: 'kalpurush', sans-serif;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 16px;
+}
+
+input,
+select,
+textarea {
+	height: 30px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.office-logo img {
+    max-width: 80px;
+}
+
+.office-name {
+    font-size: 1.5em;
+}
+
+main {
+    flex: 1;
+    padding: 10px;
+}
+
+.login-box {
+    max-width: 300px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.login-form {
+    padding: 10px;
+}
+
+.login-form__field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.login-form__field label {
+    flex-basis:30%;
+}
+
+.login-form__field input {
+    flex-basis: 70%;
+}
+
+.show-password {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; 
+}
+
+.submit-button {
+    display: block;
+    margin: 10px auto;
+    width: 130px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 5px 0;
+}
+
+/*-----end of login page-----*/
+
+/*-----start of home page-----*/
+
+.logged-inside {
+    
+}
+
+.home-text h2 {
+    text-align: center;
+}
+
+.home-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-action div {
+    width: 300px;
+    background-color: aqua;
+    border-radius: 20px;
+    margin: 5px;
+    text-align: center;
+}
+
+
+
+/*-----end of home page-----*/
