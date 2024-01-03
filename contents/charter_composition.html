@@ -27,15 +27,69 @@
             <div></div>
         </header>
 
-        <main>
+        <main class="content-main">
 
             <div class="content-title">
-                <h2>সিটিজেন চার্টার প্রণয়ন</h2>
+                <h2>সেবা প্রদান প্রতিশ্রুতি প্রণয়ন</h2>
             </div>
 
-            <div>
-             
-            </div>
+            <form class="form-compose" action="#" method="get">
+                <section class="vision-mission">
+                    <div class="section-title">
+                        <h3>১. ভিশন ও মিশন</h3>
+                    </div>
+                    <div>
+                        <label for="officeVision">ভিশনঃ</label>
+                        <textarea name="officeVision" id="officeVision" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="officeMission">মিশনঃ</label>
+                        <textarea name="officeMission" id="officeMission" cols="30" rows="10"></textarea>
+                    </div>
+                </section>
+
+                <section class="service-catalog">
+                    <div class="section-title">
+                        <h3>২. প্রতিশ্রুতি ও সেবাসমূহ</h3>
+                    </div>
+
+                    <div class="service-title">
+                        <h4>২.১) নাগরিক সেবা</h4>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ক্র. নং</th>
+                                <th>সেবার নাম</th>
+                                <th>সেবা প্রদান পদ্ধতি</th>
+                                <th>প্রয়োজনীয় কাগজপত্র ও প্রাপ্তিস্থান</th>
+                                <th>সেবার মূল্য ও পরিশোধ পদ্ধতি</th>
+                                <th>সেবা প্রদানের সময়সীমা</th>
+                                <th>দায়িত্বপ্রাপ্ত কর্মকর্তা</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="serviceSerial"></td>
+                                <td><input type="text" name="serviceName"></td>
+                                <td><input type="text" name="serviceMethod"></td>
+                                <td><input type="text" name="serviceDocs"></td>
+                                <td><input type="text" name="servicePrice"></td>
+                                <td><input type="text" name="serviceDeadline"></td>
+                                <td><input type="text" name="serviceProvider"></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                    <button type="button" onclick="addRow()">নতুন সারি</button>
+
+                </section>
+                
+                <button type="submit">সংরক্ষণ করুন</button>
+
+            </form>
 
         </main>
 
