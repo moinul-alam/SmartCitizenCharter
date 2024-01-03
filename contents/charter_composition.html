@@ -66,24 +66,33 @@
                                 <th>সেবার মূল্য ও পরিশোধ পদ্ধতি</th>
                                 <th>সেবা প্রদানের সময়সীমা</th>
                                 <th>দায়িত্বপ্রাপ্ত কর্মকর্তা</th>
+                                <th>অ্যাকশন</th>
                             </tr>
                         </thead>
 
-                        <tbody>
+                        <tbody class="dynamic-row" id="dynamicRow">
                             <tr>
-                                <td><input type="text" name="serviceSerial"></td>
+                                <!-- <td><input type="text" name="serviceSerial"></td>
                                 <td><input type="text" name="serviceName"></td>
                                 <td><input type="text" name="serviceMethod"></td>
                                 <td><input type="text" name="serviceDocs"></td>
                                 <td><input type="text" name="servicePrice"></td>
                                 <td><input type="text" name="serviceDeadline"></td>
                                 <td><input type="text" name="serviceProvider"></td>
+                                <td><button type="button" onclick="saveRowData(this)">সংরক্ষণ করুন</button></td>
+                                <td><button type="button" onclick="editRowData(this)">সম্পাদনা করুন</button></td>
+                                <td><button type="button" onclick="removeRowData(this)">মুছে ফেলুন</button></td> -->
                             </tr>
                         </tbody>
 
                     </table>
 
-                    <button type="button" onclick="addRow()">নতুন সারি</button>
+                    <button type="button" onclick="addRow(7)">নতুন সারি</button>
+
+                    <script src="../resources/js/addrow.js"></script>
+                    <script>
+                        addRow(7);
+                    </script>
 
                 </section>
                 

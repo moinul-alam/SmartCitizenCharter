@@ -1,27 +1,75 @@
-function addRow() {
-    // Add logic to dynamically add rows to the table
-    var table = document.querySelector('table tbody');
-    var newRow = table.insertRow(table.rows.length);
-    var cell1 = newRow.insertCell(0);
-    var cell2 = newRow.insertCell(1);
-    var cell3 = newRow.insertCell(2);
-    var cell4 = newRow.insertCell(3);
-    var cell5 = newRow.insertCell(4);
-    var cell6 = newRow.insertCell(5);
-    var cell7 = newRow.insertCell(6);
-
-    // Add additional logic to customize cells, input elements, etc.
-    cell1.innerHTML = '<input type="text" name="service_name[]">';
-    cell2.innerHTML = '<input type="text" name="description[]">';
-    cell3.innerHTML = '<input type="text" name="category[]">';
-    cell4.innerHTML = '<input type="text" name="cost[]">';
-    cell5.innerHTML = '<input type="text" name="duration[]">';
-    cell6.innerHTML = '<input type="checkbox" name="available[]">';
-    cell7.innerHTML = '<button type="button" onclick="removeRow(this)">Remove</button>';
+function createInput(type, name, readOnly = true) {
+    var input = document.createElement('input');
+    input.type = type;
+    input.name = name;
+    input.readOnly = readOnly;
+    return input;
 }
 
-function removeRow(button) {
-    // Add logic to remove the corresponding row
+function addRow(columnCount) {
+    var tbody = document.getElementById('dynamicRow');
+    var newRow = document.createElement('tr');
+
+    for (var i = 0; i < columnCount; i++) {
+        var cell = document.createElement('td');
+        cell.appendChild(createInput('text', 'column' + (i + 1), false));
+        newRow.appendChild(cell);
+    }
+
+    var saveButtonCell = document.createElement('td');
+    saveButtonCell.appendChild(createInput('button', 'সংরক্ষণ করুন', false));
+    saveButtonCell.firstChild.value = 'সংরক্ষণ করুন';
+    saveButtonCell.firstChild.onclick = function() {
+        saveRowData(this);
+    };
+
+    var editButtonCell = document.createElement('td');
+    editButtonCell.appendChild(createInput('button', 'সম্পাদন করুন', true));
+    editButtonCell.firstChild.value = 'সম্পাদন করুন';
+    // Disable Edit button initially
+    editButtonCell.firstChild.disabled = true;
+    editButtonCell.firstChild.onclick = function() {
+        editRowData(this);
+    };
+
+    var removeButtonCell = document.createElement('td');
+    removeButtonCell.appendChild(createInput('button', 'মুছে ফেলুন', true));
+    removeButtonCell.firstChild.value = 'মুছে ফেলুন';
+    removeButtonCell.firstChild.onclick = function() {
+        removeRowData(this);
+    };
+
+    newRow.appendChild(saveButtonCell);
+    newRow.appendChild(editButtonCell);
+    newRow.appendChild(removeButtonCell);
+    tbody.appendChild(newRow);
+}
+
+function saveRowData(button) {
     var row = button.parentNode.parentNode;
-    row.parentNode.removeChild(row);
+    var inputs = row.querySelectorAll('input[type="text"]');
+    inputs.forEach(function(input) {
+        input.readOnly = true;
+    });
+    button.disabled = true;
+    row.querySelector('[value="সম্পাদন করুন"]').disabled = false;
+    row.querySelector('[value="মুছে ফেলুন"]').disabled = false;
+}
+
+function editRowData(button) {
+    var row = button.parentNode.parentNode;
+    var inputs = row.querySelectorAll('input[type="text"]');
+    inputs.forEach(function(input) {
+        input.readOnly = false;
+    });
+    button.disabled = true;
+    row.querySelector('[value="সংরক্ষণ করুন"]').disabled = false;
+}
+
+function removeRowData(button) {
+    var row = button.parentNode.parentNode;
+    var confirmation = confirm('Are you sure you want to delete this row?');
+    if (confirmation) {
+        row.parentNode.removeChild(row);
+    }
 }
