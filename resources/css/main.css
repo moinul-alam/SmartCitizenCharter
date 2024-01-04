@@ -1,3 +1,13 @@
+/* CSS Variables */
+:root {
+    --primary-color: #1180db;
+    --secondary-color: #333;
+    --background-color: rgba(255,255,255,0.7);
+    --border-radius: 5px;
+    --transition: all 0.5s ease-in-out;
+}
+
+/* Global Styles */
 * {
 	box-sizing: border-box;
 	font-family: 'kalpurush', sans-serif;
@@ -5,17 +15,34 @@
     padding: 0;
 }
 
-html, body {
-    height: 100vh;
+@media (max-width: 768px) {
+
+    .navbar {
+      flex-direction: column;
+    }
+    
+    .navbar ul {
+      padding: 10px 0;
+    }
+    
 }
 
 body {
-
+    height: 100vh;
     background-image: url(/images/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    line-height: 1.2;
     font-size: 16px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
 }
 
 input,
@@ -23,20 +50,48 @@ select,
 textarea {
 	height: 30px;
 	border: 1px solid grey;
-	border-radius: 5px;
+	border-radius: var(--border-radius);
 }
 
-a {
-    text-decoration: none;
+/* Reusable Styles */
+.form-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
+.form-field label {
+    flex-basis:30%;
+}
+
+.form-field input {
+    flex-basis: 70%;
+}
+
+.btn {
+    display: block;
+    border-radius: var(--border-radius);
+    margin: 10px auto;
+    width: 130px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Container Styles */
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0 auto;
 }
 
-.login-header {
+/* Login Page Style */
+.login-top {
     text-align: center;
     padding: 10px 0;
 }
@@ -47,6 +102,7 @@ a {
 
 .office-name {
     font-size: 1.5em;
+    margin: 10px;
 }
 
 .login-main {
@@ -57,7 +113,7 @@ a {
 .login-box {
     max-width: 300px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.4);
+    background: var(--background-color);
     border-radius: 10px;
 }
 
@@ -70,20 +126,6 @@ a {
     padding: 10px;
 }
 
-.login-form__field {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.login-form__field label {
-    flex-basis:30%;
-}
-
-.login-form__field input {
-    flex-basis: 70%;
-}
-
 .show-password {
     cursor: pointer;
     border: none;
@@ -92,29 +134,19 @@ a {
     margin: 0 auto; 
 }
 
-.submit-button {
-    display: block;
-    margin: 10px auto;
-    width: 130px;
-    font-size: 1em;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 footer {
     text-align: center;
     padding: 5px 0;
 }
 
-/*-----end of login page-----*/
+/*----- Start of login page styles------*/
 
 /* -----start of header styles----- */
 
 .common-header {
     display: flex;
     border-bottom: 2px solid #1180db;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--background-color);
 }
 
 .common-header div {
@@ -127,11 +159,7 @@ footer {
     margin: 10px 100px;
 }
 
-.office-name__govt {
-    text-align: center;
-}
-
-.office-name__office {
+.office-name {
     text-align: center;
 }
 
@@ -157,7 +185,7 @@ nav ul li a {
     color: #fff;
     font-size: 1.2em;
     text-align: center;
-    transition: 0.5s ease;
+    transition: var(--transition);
 }
 
 .nav-submenu {
@@ -167,13 +195,14 @@ nav ul li a {
 nav ul li:hover .nav-submenu {
     display: block;
     position: absolute;
+    transition: var(--transition);
 }
 
 .content-main {
     min-height: 60vh;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
     padding: 10px;
 }
 
@@ -192,7 +221,7 @@ nav ul li:hover .nav-submenu {
 .home-action div {
     width: 300px;
     background-color: aqua;
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     margin: 5px;
     text-align: center;
 }
