@@ -1,6 +1,8 @@
 * {
 	box-sizing: border-box;
 	font-family: 'kalpurush', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
@@ -8,8 +10,7 @@ html, body {
 }
 
 body {
-    margin: 0;
-    padding: 0;
+
     background-image: url(/images/background.jpg);
     background-size: cover;
     background-position: center;
@@ -27,14 +28,6 @@ textarea {
 
 a {
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:visited {
-    color: #551a8b;
 }
 
 .container {
@@ -131,18 +124,50 @@ footer {
 .common-header .office-logo img {
     display: block;
     float: right;
-    margin: 20px auto;
+    margin: 10px 100px;
 }
 
-.common-header .office-name p {
-    margin: auto;
+.office-name__govt {
     text-align: center;
-    font-weight: 800;
+}
+
+.office-name__office {
+    text-align: center;
+}
+
+.app-name {
+    margin: auto;
 }
 
 /* -----end of header styles----- */
 
 /*-----start of home page-----*/
+
+nav ul {
+    background-color: #1180db;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 5px 40px;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.nav-submenu {
+    display: none;
+}
+
+nav ul li:hover .nav-submenu {
+    display: block;
+    position: absolute;
+}
 
 .content-main {
     min-height: 60vh;
@@ -152,7 +177,7 @@ footer {
     padding: 10px;
 }
 
-.home-text h2, .content-title h2 {
+.home-intro h2, .content-title h2 {
     text-align: center;
     margin: 5px auto;
 }
@@ -173,26 +198,4 @@ footer {
 }
 
 /*-----end of home page-----*/
-
-/* Add this style to your existing CSS or create a new CSS file */
-.save-message {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    animation: fadeInOut 2s ease-in-out;
-}
-
-@keyframes fadeInOut {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
-
 
