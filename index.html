@@ -2,55 +2,67 @@
 <html lang="bn">
 
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/govlogo.png" type="image/x-icon">
-    <link rel="stylesheet" href="resources/css/main.css">
-    <link rel="stylesheet" href="resources/css/fonts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha384-twcuYPV86B3vvpwNhWJuaLdUSLF9+ttgM2A6M870UYXrOsxKfER2MKox5cirApyA" crossorigin="anonymous">    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>স্মার্ট সিটিজেন চার্টার - অভ্যন্তরীণ সম্পদ বিভাগ, অর্থ মন্ত্রণালয়</title>
+    <link rel="icon" href="images/govlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://moinul-alam.github.io/BanglaFonts/fonts.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/css/style.css">
 </head>
 
 <body>
 
     <div class="container">
-        <header class="login-header">
+        <section class="login-top text-center">
             <div class="office-logo">
                 <img src="images/govlogo.png" alt="Government of Bangladesh Logo">
             </div>
             <div class="office-name">
-                <p>গণপ্রজাতন্ত্রী বাংলাদেশ সরকার<br>
-                    অভ্যন্তরীণ সম্পদ বিভাগ<br>
-                    অর্থ মন্ত্রণালয়</p>
+                <h4>গণপ্রজাতন্ত্রী বাংলাদেশ সরকার<br>
+                    অর্থ মন্ত্রণালয়<br>
+                    অভ্যন্তরীণ সম্পদ বিভাগ</h4>
             </div>
-        </header>
+        </section>
 
-        <main class="login-main">
-            <div class="login-box">
-                <h2>লগিন</h2>
-                <form class="login-form" action="contents/home.html" method="get">
-                    <div class="login-form__field">
-                        <label for="userName">ইউজারনেম</label>
-                        <input type="text" id="userName" name="userName">
-                    </div>
+        <section class="app-name text-center">
+          <h4>স্মার্ট সিটিজেন চার্টার</h4>
+        </section>
 
-                    <div class="login-form__field">
-                        <label for="password">পাসওয়ার্ড</label>
-                        <input type="password" id="password" name="password">
-                    </div>
+        <main class="d-flex justify-content-center h-100">
+            <div class="card">              
+              <div class="card-header text-center">
+                  <h3>লগিন</h3>
+              </div>
 
-                    <button type="button" class="show-password" id="showPassword" onclick="togglePassword()" title="পাসওয়ার্ড দেখুন">পাসওয়ার্ড দেখুন</button>
+              <div class="card-body">
+                  <form action="contents/home.html" class="login-form" method="get">
+                      <div class="input-group mb-3">
+                          <span class="input-group-text"><i class="fas fa-user"></i></span>
+                          <input type="text" id="userName" class="form-control" placeholder="ইউজার নেম" aria-describedby="userName">
+                      </div>
 
-                    <button type="submit" class="submit-button">লগইন করুন</button>
-                </form>
+                      <div class="input-group mb-3">
+                          <span class="input-group-text"><i class="fas fa-key"></i></span>
+                          <input type="password" id="password" class="form-control" placeholder="পাসওয়ার্ড" aria-describedby="password">
+                      </div>
+
+                      <div class="form-check show-password">
+                          <input type="checkbox" onclick="togglePassword()" class="form-check-input" id="showPassword">
+                          <label class="form-check-label" for="showPassword">পাসওয়ার্ড দেখুন</label>
+                      </div>
+
+                      <div class="form-group text-center">
+                          <button type="submit" class="btn login-btn">লগিন করুন</button>
+                      </div>
+                  </form>
+              </div>
             </div>
         </main>
-
-        <footer>
-            <a href="mailto:info@ird.gov.bd" target="_blank"><i class="fa-solid fa-envelope"></i>&nbsp;info@ird.gov.bd</a>
-            <a href="https://www.ird.gov.bd/" target="_blank"><i class="fa-solid fa-globe"></i> www.ird.gov.bd</a>
-        </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="resources/js/togglepassword.js"></script>
 </body>
 
