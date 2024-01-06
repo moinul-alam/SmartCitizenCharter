@@ -3,10 +3,7 @@
 
 /* CSS Variables */
 :root {
-  --transparent-background: rgba(255,255,255,0.7);
-  --custom-color-ylw: #FFC312;
-  --border-radius-5: 5px;
-  --transition: all 0.5s ease-in-out;
+  --custom-color-ylw: #FFC312 !important;
 }
 
 /* Global Styles */
@@ -20,83 +17,40 @@ html, body {
   background-image: url(/images/login-bg.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
+  line-height: 1.2;
   height: 100%;
   font-family: 'Kalpurush', sans-serif;
-  font-size: 16px;
+  font-size: 62.5%;
 }
 
 .container {
-  height: 100%;
   align-content: center;
 }
 
-.login-top {
-  margin-bottom: 50px;
-}
-
-.office-name {
-  color: white;
-  margin: 20px;
-}
-
-.app-name h4 {
+/* Login Page Style */
+.app-name h3 {
   font-family: 'Siyam Rupali', sans-serif;
-  background-color: #FFC312;
-  padding: 10px;
-  margin: auto;
-  max-width: 400px;
-  border-top-right-radius: var(--border-radius-5);
-  border-top-left-radius: var(--border-radius-5);
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: black;
 }
 
-.card {
-  margin-bottom: auto;
-  width: 400px;
-  background-color: rgba(0,0,0,0.6) !important;
+.login-box-w {
+  width: 40rem;
 }
 
-.card-header h3 {
-  color:var(--custom-color-ylw);
-  font-size: 2rem;
-  margin: auto;
+.login-box-bg {
+  background-color: rgba(0,0,0,0.5) !important;
 }
 
-.input-group span {
-  width: 50px;
-  background-color: #FFC312;
-  color: black;
-  border:0 !important;
+.card-body .input-group {
+  height: 3.5rem;
 }
 
-input:focus{
-  outline: 0 0 0 0  !important;
+.card-body .input-group-text {
+  width: 3.4rem;
+}
+
+.card-body .input-group input:focus{
+  border: 2px solid var(--custom-color-ylw);
   box-shadow: 0 0 0 0 !important;
 }
 
-.show-password {
-  color: white;
-}
-
-.show-password input {
-  width: 20px;
-  height: 20px;
-  margin-left: 15px;
-  margin-right: 5px;
-}
-
-.btn{
-  color: black;
-  background-color: #FFC312;
-  font-weight: 600;
-  width: 100px;
-  border: none;
-  border-radius: var(--border-radius-5);
-  transition: var(--transition);
-}
-
-.btn:hover{
-  background-color: white;
-}
+/* Homepage Style */
