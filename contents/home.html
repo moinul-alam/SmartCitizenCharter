@@ -2,81 +2,100 @@
 <html lang="bn">
 
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/govlogo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/resources/css/main.css">
-    <link rel="stylesheet" href="/resources/css/fonts.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha384-twcuYPV86B3vvpwNhWJuaLdUSLF9+ttgM2A6M870UYXrOsxKfER2MKox5cirApyA" crossorigin="anonymous">
-    <title>স্মার্ট সিটিজেন চার্টার - অভ্যন্তরীণ সম্পদ বিভাগ, অর্থ মন্ত্রণালয়</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>স্মার্ট সিটিজেন চার্টার - অভ্যন্তরীণ সম্পদ বিভাগ, অর্থ মন্ত্রণালয়</title>
+  <link rel="icon" href="/images/govlogo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://moinul-alam.github.io/BanglaFonts/fonts.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 
 <body>
+  <div class="container home-container bg-light">
+    <header class="d-flex justify-content-evenly bg-info sticky-top text-center border-bottom p-2">
+      <div class="header-left">
+        <img class="img-fluid" src="/images/govlogo.png" alt="Government of Bangladesh Logo">
+      </div>
 
-    <div class="container">
-        <header class="common-header">
+      <div class="header-center">
+        <h4 class="fs-2">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার<br>
+          অর্থ মন্ত্রণালয়<br>
+          <span class="fs-1 fw-bold">অভ্যন্তরীণ সম্পদ বিভাগ</span></h4>
+      </div>
 
-            <div class="office-logo">
-                <img src="/images/govlogo.png" alt="Government of Bangladesh Logo">
-            </div>
+      <div class="header-right app-name d-flex align-items-center">
+        <h3 class="fs-1 fw-bold">স্মার্ট <br> সিটিজেন চার্টার</h3>
+      </div>
+    </header>
 
-            <div class="office-name">
-                <div class="office-name__govt">
-                    <h5>গণপ্রজাতন্ত্রী বাংলাদেশ সরকার <br>
-                        অর্থ মন্ত্রণালয়</h5>
-                </div>
-                <div class="office-name__office">
-                    <h4>অভ্যন্তরীণ সম্পদ বিভাগ</h4>
-                </div>
-            </div>
+    <nav class="navbar navbar-expand-lg bg-warning fs-2 sticky-top ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="app-name">
-                <h1>স্মার্ট সিটিজেন চার্টার</h1>
-            </div>
-            
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="#">হোম</a></li>
-                <li><a href="#">সিটিজেন চার্টার &#x25BE</a>
-                    <ul class="nav-submenu">
-                        <li></li><a href="#">সিটিজেন চার্টার প্রণয়ন</a></li>   
-                        <li></li><a href="#">সিটিজেন চার্টার হালনাগাদকরণ</a></li>   
-                        <li></li><a href="#">সিটিজেন চার্টার প্রিন্ট</a></li>   
-                    </ul>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">হোম</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                সিটিজেন চার্টার
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="nav-item">
+                  <a class="dropdown-item" href="#">সিটিজেন চার্টার প্রণয়ন</a>
                 </li>
-                <li><a href="#">ড্যাশবোর্ড</a></li>
-                <li><a href="#">ইউজার</a></li>
-                <li><a href="#">লগআউট</a></li> 
-            </ul>       
-        </nav>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="#">সিটিজেন চার্টার হালনাগাদকরণ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item" href="#">সিটিজেন চার্টার প্রিন্ট</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ড্যাশবোর্ড</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ইউজার</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">লগআউট</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-        <main>
+    <main class="main-content p-1">
+      <section class="page-intro">
+        <h2>অভ্যন্তরীণ সম্পদ বিভাগের স্মার্ট সিটিজেন চার্টার ব্যবস্থাপনায় আপনাকে স্বাগতম।</h2>
+      </section>
 
-            <section class="home-intro">
-                <h2>অভ্যন্তরীণ সম্পদ বিভাগের স্মার্ট সিটিজেন চার্টার ব্যবস্থাপনায় আপনাকে স্বাগতম।</h2>
-            </section>
+      <section class="home-action">
+        <div>
+            <h3><a href="/contents/charter_composition.html">সিটিজেন চার্টার প্রণয়ন</a></h3>
+        </div>
+        <div>
+            <h3><a href="/contents/charter_update.html">সিটিজেন চার্টার হালনাগাদকরণ</a></h3>
+        </div>
+        <div>
+            <h3><a href="/contents/charter_view.html">সিটিজেন চার্টার দেখুন</a></h3>
+        </div>
+      </section>
+    </main>
 
-            <div class="home-action">
-                <div>
-                    <h3><a href="/contents/charter_composition.html">সিটিজেন চার্টার প্রণয়ন</a></h3>
-                </div>
-                <div>
-                    <h3><a href="/contents/charter_update.html">সিটিজেন চার্টার হালনাগাদকরণ</a></h3>
-                </div>
-                <div>
-                    <h3><a href="/contents/charter_view.html">সিটিজেন চার্টার দেখুন</a></h3>
-                </div>
-            </div>
+    <footer>
+      <p>কারিগরি সহায়তায়: আইসিটি সেল, অভ্যন্তরীণ সম্পদ বিভাগ</p>
+      <p>যোগাযোগ:  <a href="mailto:info@ird.gov.bd"><i class="fa-solid fa-envelope"></i>&nbsp;info@ird.gov.bd</a>,&nbsp;<a href="https://www.ird.gov.bd/"><i class="fa-solid fa-globe"></i> www.ird.gov.bd</a></p>
+    </footer>   
+  </div>
 
-        </main>
-
-        <footer>
-            <p>কারিগরি সহায়তায়: আইসিটি সেল, অভ্যন্তরীণ সম্পদ বিভাগ</p>
-            <p>যোগাযোগ:  <a href="mailto:info@ird.gov.bd"><i class="fa-solid fa-envelope"></i>&nbsp;info@ird.gov.bd</a>,&nbsp;<a href="https://www.ird.gov.bd/"><i class="fa-solid fa-globe"></i> www.ird.gov.bd</a></p>
-        </footer>
-    </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

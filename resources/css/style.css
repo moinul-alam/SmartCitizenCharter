@@ -1,0 +1,56 @@
+/* Custom fonts */
+@import url('https://moinul-alam.github.io/BanglaFonts/fonts.css');
+
+/* CSS Variables */
+:root {
+  --custom-color-ylw: #FFC312 !important;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-image: url(/images/login-bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  line-height: 1.2;
+  height: 100%;
+  font-family: 'Kalpurush', sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  align-content: center;
+}
+
+/* Login Page Style */
+.app-name h3 {
+  font-family: 'Siyam Rupali', sans-serif;
+}
+
+.login-box-w {
+  width: 40rem;
+}
+
+.login-box-bg {
+  background-color: rgba(0,0,0,0.5) !important;
+}
+
+.card-body .input-group {
+  height: 3.5rem;
+}
+
+.card-body .input-group-text {
+  width: 3.4rem;
+}
+
+.card-body .input-group input:focus{
+  border: 2px solid var(--custom-color-ylw);
+  box-shadow: 0 0 0 0 !important;
+}
+
+/* Homepage Style */
