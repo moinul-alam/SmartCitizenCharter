@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Ekushey Bangla Kolom';
+    src: url('fonts/Banglakolom.eot');
+    src: url('fonts/Banglakolom.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Banglakolom.woff2') format('woff2'),
+         url('fonts/Banglakolom.woff') format('woff'),
+         url('fonts/Banglakolom.ttf')  format('truetype'),
+         url('fonts/Banglakolom.svg#Ekushey Bangla Kolom') format('svg');
+}

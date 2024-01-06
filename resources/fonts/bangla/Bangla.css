@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Bangla';
+    src: url('fonts/Bangla.eot');
+    src: url('fonts/Bangla.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Bangla.woff2') format('woff2'),
+         url('fonts/Bangla.woff') format('woff'),
+         url('fonts/Bangla.ttf')  format('truetype'),
+         url('fonts/Bangla.svg#Bangla') format('svg');
+}
