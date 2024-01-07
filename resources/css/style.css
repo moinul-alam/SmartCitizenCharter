@@ -73,7 +73,3 @@ html, body {
     visibility: visible;
   }
 }
-
-header div {
-  flex: 33%;
-}
