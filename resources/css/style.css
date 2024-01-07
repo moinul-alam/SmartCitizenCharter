@@ -8,23 +8,19 @@
 
 /* Global Styles */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html, body {
   background-image: url(https://raw.githubusercontent.com/moinul-alam/SmartCitizenCharter/main/images/login-bg.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  line-height: 1.2;
-  height: 100%;
   font-family: 'Kalpurush', sans-serif;
-  font-size: 62.5%;
-}
-
-.container {
-  align-content: center;
+  font-size: 100%;
+  height: 100%;
+  line-height: 1.2;
 }
 
 /* Login Page Style */
@@ -33,7 +29,7 @@ html, body {
 }
 
 .login-box-w {
-  width: 40rem;
+  width: 25rem;
 }
 
 .login-box-bg {
@@ -41,11 +37,11 @@ html, body {
 }
 
 .card-body .input-group {
-  height: 3.5rem;
+  height:2rem;
 }
 
 .card-body .input-group-text {
-  width: 3.4rem;
+  width: 2.5rem;
 }
 
 .card-body .input-group input:focus{
