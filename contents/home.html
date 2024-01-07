@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>স্মার্ট সিটিজেন চার্টার - অভ্যন্তরীণ সম্পদ বিভাগ, অর্থ মন্ত্রণালয়</title>
+  <title>স্মার্ট সিটিজেন্‌স চার্টার - অভ্যন্তরীণ সম্পদ বিভাগ, অর্থ মন্ত্রণালয়</title>
   <link rel="icon" href="/images/govlogo.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="container home-container d-flex flex-column bg-light">
+  <div class="container-fluid d-flex flex-column bg-light">
     <header class="d-flex justify-content-evenly bg-info sticky-top text-center border-bottom p-2">
       <div class="header-left my-auto">
         <img class="img-fluid" src="/images/govlogo.png" alt="Government of Bangladesh Logo">
@@ -24,77 +24,74 @@
           <span class="fs-3 fw-bold">অভ্যন্তরীণ সম্পদ বিভাগ</span></h4>
       </div>
 
-      <div class="header-right app-name my-auto">
-        <h3 class="fw-bold my-auto text-muted">স্মার্ট <br> সিটিজেন চার্টার</h3>
+      <div class="header-right app-name my-auto d-flex">
+        <h3 class="fw-bold my-auto text-muted">স্মার্ট <br> সিটিজেন্‌স চার্টার</h3>
+        <lord-icon
+          src="https://cdn.lordicon.com/quvetciz.json"
+          trigger="loop"
+          delay="2000"
+          style="width:5rem;height:5rem">
+        </lord-icon>
       </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg bg-warning sticky-top ">
+    <nav class="navbar navbar-expand-sm bg-warning sticky-top fs-5">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">
+          <lord-icon 
+            src="https://cdn.lordicon.com/pbbsmkso.json"
+            trigger="loop"
+            delay="100"
+            style="width:30px;height:30px">
+          </lord-icon>
+        </a>
+        <button class="navbar-toggler btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">হোম</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                সিটিজেন চার্টার
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="offcanvas offcanvas-end bg-warning" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">অভ্যন্তরীণ সম্পদ বিভাগ</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 fw-bold">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">
+                  <i class="fa-solid fa-house"></i> হোম</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-file-lines"></i> সিটিজেন চার্টার
+                </a>
+                <ul class="dropdown-menu bg-warning fs-4">
+                  <li class="nav-item"><a class="dropdown-item" href="#">প্রণয়ন</a></li>
+                  <li><a class="dropdown-item" href="#">হালনাগাদকরণ</a></li>
+                  <li><a class="dropdown-item" href="#">প্রিন্ট</li>
+                </ul>
                 <li class="nav-item">
-                  <a class="dropdown-item" href="#">সিটিজেন চার্টার প্রণয়ন</a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item" href="#">সিটিজেন চার্টার হালনাগাদকরণ</a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item" href="#">সিটিজেন চার্টার প্রিন্ট</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">ড্যাশবোর্ড</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">ইউজার</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">লগআউট</a>
-            </li>
-          </ul>
+                  <a class="nav-link mx-lg-2" href="#"><i class="fa-solid fa-table-columns"></i> ড্যাশবোর্ড</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#"><i class="fa-solid fa-user"></i> ইউজার</a>
+              </li>
+              </li>
+            </ul>
+          </div>
         </div>
+        <a class="btn btn-outline-danger fw-bold" href="#"><i class="fa-solid fa-right-from-bracket"></i> লগ আউট</a>
       </div>
     </nav>
 
     <main class="main-content p-3 text-center">
       <section class="page-intro fs-4">
-        <p>অভ্যন্তরীণ সম্পদ বিভাগের স্মার্ট সিটিজেন চার্টার ব্যবস্থাপনায় আপনাকে স্বাগতম।</p>
+        <p>অভ্যন্তরীণ সম্পদ বিভাগের স্মার্ট সিটিজেন্‌স চার্টার ব্যবস্থাপনায় আপনাকে স্বাগতম।</p>
       </section>
 
-      <section class="home-action">
-        <div>
-            <h3><a href="/contents/charter_composition.html">সিটিজেন চার্টার প্রণয়ন</a></h3>
-        </div>
-        <div>
-            <h3><a href="/contents/charter_update.html">সিটিজেন চার্টার হালনাগাদকরণ</a></h3>
-        </div>
-        <div>
-            <h3><a href="/contents/charter_view.html">সিটিজেন চার্টার দেখুন</a></h3>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>কারিগরি সহায়তায়: আইসিটি সেল, অভ্যন্তরীণ সম্পদ বিভাগ</p>
-      <p>যোগাযোগ:  <a href="mailto:info@ird.gov.bd"><i class="fa-solid fa-envelope"></i>&nbsp;info@ird.gov.bd</a>,&nbsp;<a href="https://www.ird.gov.bd/"><i class="fa-solid fa-globe"></i> www.ird.gov.bd</a></p>
-    </footer>   
+    </main> 
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </body>
 
 </html>
