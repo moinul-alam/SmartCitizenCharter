@@ -9,85 +9,141 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/resources/css/style.css">
+  <script src="/resources/js/includeComponent.js"></script>
 </head>
 
 <body>
   <div class="container-fluid d-flex flex-column bg-light">
-
     <!-- Header Area -->
-    <header id="header">
-    </header>
+    <header id="header"></header>
 
     <!-- Navbar Area -->
-    <nav id="navbar">
-    </nav>
+    <nav class="sticky-top" id="navbar"></nav>
 
-    <!-- Main Area -->
-    <main class="main-content p-3 text-center">
+    <!-- Main Content Area -->
+    <main class="main-content p-3">
       <section class="page-intro fs-4">
-        <p>অভ্যন্তরীণ সম্পদ বিভাগের স্মার্ট সিটিজেন্‌স চার্টার ব্যবস্থাপনায় আপনাকে স্বাগতম।</p>
+        <p class="alert alert-warning text-center">অভ্যন্তরীণ সম্পদ বিভাগের স্মার্ট সিটিজেন্‌স চার্টার ব্যবস্থাপনায় আপনাকে স্বাগতম।</p>
       </section>
-      <article class="fs-4 d-flex justify-content-center">
-        <div id="carouselExampleAutoplaying" class="carousel slide w-25" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <h3 class="carousel-title">সেবা প্রদান প্রতিশ্রুতি</h3>
-              <p class="carousel-text">
-        সেবা প্রদান প্রতিশ্রুতি সামাজিক জবাবদিহি নিতিমালার একটি নীতি। সেবা প্রদান প্রতিশ্রুতি নাগরিককে সরকারি সেবা সংক্রান্ত তথ্য দেয়ার মাধ্যমে সরকারি প্রতিষ্ঠান থেকে তাদের সেবা পাওয়াকে সহজ করে দেয়।</p>
-            </div>
-            <div class="carousel-item">
-              <h3 class="carousel-title">উদ্দেশ্য</h3>
-              <p class="carousel-text">নাগরিক সনদের উদ্দেশ্য সরকারি সেবাক্ষেত্রে দায়বদ্ধতা, স্বচ্ছতা ও মানের উন্নয়ন। নাগরিক সনদে সেবার মানদণ্ড নির্ধারিত ও সেবাপ্রাপ্তির অঙ্গীকার বর্ণিত রয়েছে। সাড়া প্রদান নিশ্চিতকরণের মাধ্যমে বর্তমান প্রশাসনিক আচরণে ইতিবাচক পরিবর্তন আনতে এটি একটি গুরুত্বপূর্ণ হাতিয়ার।</p>
-            </div>
-            <div class="carousel-item">
-              <h3 class="carousel-title">ফলাফল</h3>
-              <p class="carousel-text">
-                <ul>
-                  <li>নাগরিকের প্রয়োজন ও প্রত্যাশা অনুযায়ী সেবার মান নির্ধারণ করে</li>
-                  <li>নাগরিকের প্রয়োজন এবং সেবা প্রদানকারীদের ক্ষমতায় গুরুত্বারোপ করে</li>
-                  <li>গঠন প্রক্রিয়ায় নাগরিক ও সেবা প্রদানকারীদের সম্পৃক্ত রাখে</li> 
-                  <li>নাগরিক এবং সরকারি কর্মকর্তাদের পারস্পরিক সহযোগিতায় উৎসাহিত করে</li> 
-                </ul>
-              </p>
+
+      <div id="contentCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="container mt-2">
+              <div class="card bg-light border-0 shadow">
+                <div class="card-body alert alert-success">
+                  <h4 class="card-title text-center fw-bold alert alert-primary">সিটিজেন্‌স চার্টার (সেবা প্রদান প্রতিশ্রুতি)</h4>
+                  <hr>  
+                  <p class="card-text p-3 fs-4 shadow">সিটিজেন্‌স চার্টার (সেবা প্রদান প্রতিশ্রুতি) হলো নাগরিক ও সেবাদাতাদের মধ্যকার একটি চুক্তি 
+                    যেখানে নাগরিকের সেবা প্রদান সংক্রান্ত যাবতীয় বিবরণ ও নির্দেশনা বিবৃত থাকে।</p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    সেবা প্রদান প্রতিশ্রুতি সামাজিক জবাবদিহি নিতিমালার একটি নীতি। 
+                    সেবা প্রদান প্রতিশ্রুতি নাগরিককে সরকারি সেবা সংক্রান্ত তথ্য দেয়ার 
+                    মাধ্যমে সরকারি প্রতিষ্ঠান থেকে তাদের সেবা পাওয়াকে সহজ করে দেয়।
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+
+          <div class="carousel-item">
+            <div class="container mt-2">
+              <div class="card bg-light border-0 shadow">
+                <div class="card-body alert alert-info">
+                  <h4 class="card-title text-center fw-bold alert alert-primary">সিটিজেন্‌স চার্টারের উদ্দেশ্য</h4>
+                  <hr>  
+                  <p class="card-text p-3 p-3 fs-4 shadow">নাগরিক সনদের উদ্দেশ্য সরকারি সেবাক্ষেত্রে 
+                    দায়বদ্ধতা, স্বচ্ছতা ও মানের উন্নয়ন।</p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    নাগরিকের প্রয়োজন ও প্রত্যাশা অনুযায়ী সেবার মান নির্ধারণ এবং সেবা কার্যক্রমে নাগরিকদের অংশীদারিত্ব বৃদ্ধিকরণ।
+                  </p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    নাগরিক এবং সরকারি কর্মকর্তাদের পারস্পরিক সহযোগিতায় উৎসাহিতকরণ।
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="container mt-2">
+              <div class="card bg-light border-0 shadow">
+                <div class="card-body alert alert-danger">
+                  <h4 class="card-title text-center fw-bold alert alert-primary">সিটিজেন্‌স চার্টারের ফলাফল</h4>
+                  <hr>  
+                  <p class="card-text p-3 p-3 fs-4 shadow">নাগরিক সনদের উদ্দেশ্য সরকারি সেবাক্ষেত্রে 
+                    দায়বদ্ধতা, স্বচ্ছতা ও মানের উন্নয়ন।</p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    নির্ধারিত সময়ের মধ্যে সেবা পাওয়া যায়।
+                  </p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    কোন কাজে কী কী কাগজ লাগবে এবং কত খরচ হবে তা জানা যায়।
+                  </p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    সেবা পাওয়ার জন্য কী কী করণীয় তা জানা যায়।
+                  </p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    সেবা প্রদানকারীদের দায়বদ্ধতা ও সেবার মান বৃদ্ধি হয়।
+                  </p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    নির্ধারিত সময়ে সেবা পাওয়া না গেলে অভিযোগ করার জন্য কার কাছে যেতে হবে তা জানা যায়
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="container mt-2">
+              <div class="card bg-light border-0 shadow">
+                <div class="card-body alert alert-secondary">
+                  <h4 class="card-title text-center fw-bold alert alert-primary">গুরুত্বপূর্ণ লিংক</h4>
+                  <hr>  
+                  <p class="card-text p-3 p-3 fs-4 shadow"> <a href="https://cabinet.gov.bd/site/page/4fcb5f31-a14e-42b2-bbc7-143e72d06fd4/%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A6%E0%A6%BE%E0%A6%A8-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%B0%E0%A7%81%E0%A6%A4%E0%A6%BF-" target="_blank">সেবা প্রদান প্রতিশ্রুতির ফরম্যাট (মন্ত্রিপরিষদ বিভাগ)</a> </p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    <a href="https://cabinet.gov.bd/site/page/10117079-8a4a-4743-99b6-1dd9c1230a07/%E0%A6%86%E0%A6%87%E0%A6%A8-%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF-%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AE%E0%A6%BE%E0%A6%B2%E0%A6%BE-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%A4%E0%A7%8D%E0%A6%B0-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A6%BE---%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%AA%E0%A6%A8" target="_blank">আইন/বিধি/নীতিমালা/পরিপত্র/নির্দেশিকা/প্রজ্ঞাপন</a>
+                  </p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    <a href="https://ird.portal.gov.bd/site/charter_of_duties/27bd0078-829a-4a27-a6a9-49abde387d22" target="_blank">অভ্যন্তরীণ সম্পদ বিভাগের সিটিজেন্‌স চার্টার</a>
+                  </p>
+                  <hr>
+                  <p class="card-text p-3 fs-4 shadow">
+                    <a href="https://ird.portal.gov.bd/site/page/7d05d680-b036-4ed4-ad92-7c56b0024d6b" target="_blank">সেবা প্রদান প্রতিশ্রুতি বিষয়ক ফোকাল পয়েন্ট কর্মকর্তা, বিকল্প কর্মকর্তা এবং পরিবীক্ষণ কমিটি</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-        
-        
-      </article>
-
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur molestias omnis commodi inventore fugiat odio. Obcaecati, minus ea autem unde, numquam temporibus excepturi est, in iusto fuga perspiciatis libero. Quas.</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis deleniti ex totam repellendus repellat culpa quos voluptatum voluptatibus iusto reprehenderit quam quo dignissimos et veniam ullam obcaecati laudantium, assumenda eius?</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores quaerat est consequuntur enim hic numquam aspernatur, quos deleniti quae corrupti aperiam illo delectus ipsum! Consectetur quaerat nemo qui ad?</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit veritatis delectus repellendus sit quae facere impedit neque iure a. Dolore, nesciunt culpa hic beatae illo omnis ut in eveniet placeat?</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, repudiandae aspernatur? Assumenda, fugit atque tenetur cumque corrupti reiciendis, placeat quos odit nemo non similique dolor. Corporis quia deserunt beatae voluptates!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rem sed nam ut sequi, ex eligendi magni voluptatem illo nostrum quibusdam, praesentium facilis aperiam porro! Cupiditate possimus inventore quae sequi.</p>
-
-      <!-- Footer Area -->
-      <footer id="footer">
-      </footer>
-
+        <button class="carousel-control-prev" type="button" data-bs-target="#contentCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#contentCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </main> 
+    
+    <!-- Footer Area -->
+    <footer id="footer"></footer>
   </div>
 
-  <script src="/resources/js/includeComponent.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
-
-  <script>
-    includeElement ('header.html', 'header');
-    includeElement ('navbar.html', 'navbar');
-    includeElement ('footer.html', 'footer');
-  </script>
-  
 </body>
 
 </html>

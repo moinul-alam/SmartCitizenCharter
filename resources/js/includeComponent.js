@@ -1,3 +1,7 @@
+includeElement ('header.html', 'header');
+includeElement ('navbar.html', 'navbar');
+includeElement ('footer.html', 'footer');
+
 function includeElement(url, targetElementID) {
     fetch(url)
         .then(response=>response.text())
