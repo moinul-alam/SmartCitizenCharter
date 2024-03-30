@@ -28,12 +28,12 @@ html, body {
   font-family: 'Siyam Rupali', sans-serif;
 }
 
-.login-box-w {
+.login-box-width {
   width: 25rem;
 }
 
 .login-box-bg {
-  background-color: rgba(0,0,0,0.5) !important;
+  background-color: rgba(0,0,0,0.7) !important;
 }
 
 .card-body .input-group {
