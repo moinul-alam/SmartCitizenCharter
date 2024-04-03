@@ -1,6 +1,7 @@
 <?php
 
 require "required/session.php";
+include "required/dbconn.php";
 ?>
 
 <!DOCTYPE html>
@@ -17,41 +18,49 @@ require "required/session.php";
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../resources/css/style.css">
-  <script src="/resources/js/includeComponent.js"></script>
+  <script src="../resources/js/includeComponent.js"></script>
 </head>
 
 <body>
-  <div class="container-fluid d-flex flex-column login-box-bg">
+  <div class="container-fluid d-flex flex-column">
     <!-- Header Area -->
     <?php
-    include 'header.php';
-    include 'navbar.php';
+      include 'header.php';
+      include 'navbar.php';
     ?>
 
     <!-- Main Content Area -->
-    <main class="main-content p-3">
-      <section class="page-intro fs-4">
-        <p class="alert alert-warning text-center"><?php echo $first_name." ".$last_name.", " ?>অভ্যন্তরীণ সম্পদ বিভাগের
-          সিটিজেন্‌স চার্টার
-          ব্যবস্থাপনায়
-          আপনাকে স্বাগতম।</p>
-      </section>
+    <main class="main-content px-4 login-box-bg">
+      <?php 
+        if($_SERVER['REQUEST_METHOD'] == "POST"){
+          $vision_statement = mysqli_real_escape_string($conn, $_POST['vision_statement']);
+          $mission_statement = mysqli_real_escape_string($conn, $_POST['mission_statement']);
+          
+          $sql = "INSERT INTO vision_mission (vision, mission) VALUES ('$vision_statement', '$mission_statement')";
 
-      <?php
-      include 'home-content.php';
+          if(mysqli_query($conn, $sql)){
+            echo "Data Inserted Successfully";
+          } else {
+            echo "Error: ". $sql. "<br>". mysqli_error($conn);
+          }
+        }
+
+        $conn->close();
       ?>
-    </main>
 
+    </main>
     <!-- Footer Area -->
     <?php
     include 'footer.php';
     ?>
   </div>
-
+  <!-- External Javascipts Sources -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script src="../resources/js/addrow.js"></script>
+  <!-- <script>addRow(7);</script> -->
 </body>
 
 </html>

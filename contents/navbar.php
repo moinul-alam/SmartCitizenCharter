@@ -26,7 +26,7 @@
               <i class="fa-solid fa-file-lines"></i> চার্টার প্রণয়ন
             </a>
             <ul class="dropdown-menu bg-warning fs-5">
-              <li class="dropdown-item"><a class="nav-link" href="#">ভিশন ও মিশন
+              <li class="dropdown-item"><a class="nav-link" href="compose_vision_mission.php">ভিশন ও মিশন
                   প্রণয়ন</a></li>
               <li class="dropdown-item"><a class="nav-link" href="#">প্রতিশ্রুতি ও সেবাসমূহ</a></li>
               <li class="dropdown-item"><a class="nav-link" href="#">অভিযোগ প্রতিকার ব্যবস্থাপনা</a></li>
@@ -61,7 +61,8 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="#"><i class="fa-solid fa-user"></i> ইউজার</a>
+            <a class="nav-link mx-lg-2 text-success" href="#"><i
+                class="fa-solid fa-user"></i><?php echo " $first_name" ?></a>
           </li>
         </ul>
       </div>
