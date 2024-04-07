@@ -1,7 +1,5 @@
 <?php
-
 require "required/session.php";
-include "required/dbconn.php";
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +16,6 @@ include "required/dbconn.php";
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../resources/css/style.css">
-  <script src="../resources/js/includeComponent.js"></script>
 </head>
 
 <body>
@@ -31,22 +28,10 @@ include "required/dbconn.php";
 
     <!-- Main Content Area -->
     <main class="main-content px-4 login-box-bg">
-      <?php 
-        if($_SERVER['REQUEST_METHOD'] == "POST"){
-          $vision_statement = mysqli_real_escape_string($conn, $_POST['vision_statement']);
-          $mission_statement = mysqli_real_escape_string($conn, $_POST['mission_statement']);
-          
-          $sql = "INSERT INTO vision_mission (vision, mission) VALUES ('$vision_statement', '$mission_statement')";
 
-          if(mysqli_query($conn, $sql)){
-            echo "Data Inserted Successfully";
-          } else {
-            echo "Error: ". $sql. "<br>". mysqli_error($conn);
-          }
-        }
-
-        $conn->close();
-      ?>
+      <section class="page-content alert alert-success text-center m-3 p-3">
+        <h3>তথ্য সফলভাবে সংরক্ষিত হয়েছে।</h3>
+      </section>
 
     </main>
     <!-- Footer Area -->
@@ -59,8 +44,6 @@ include "required/dbconn.php";
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
-  <script src="../resources/js/addrow.js"></script>
-  <!-- <script>addRow(7);</script> -->
 </body>
 
 </html>

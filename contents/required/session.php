@@ -1,29 +1,33 @@
 <?php
 
-include "dbconn.php";
 session_start();
-
+include "dbconn.php";
+// Check if user is logged in
 if (!isset($_SESSION['username'])) {
-
-  echo '<script>alert("লগিন করুন");</script>';
-  header("Location: ../index.php");
-  exit; 
+    echo '<script>alert("লগিন করুন");</script>';
+    header("Location: ../index.php");
+    exit;
 }
-  $username = $_SESSION['username'];
 
-  $sql = "SELECT first_name, last_name FROM users WHERE username = ?";
-  $stmt = $conn->prepare($sql);
-  $stmt->bind_param("s",$username);
-  $stmt->execute();
-  $result = $stmt->get_result();
+$username = $_SESSION['username'];
 
-  if($result->num_rows >0) {
-    while($row = $result->fetch_assoc()){
-      $first_name = $row["first_name"];
-      $last_name = $row["last_name"];
-    }
-  }
+// Retrieve user details (optional if not needed elsewhere)
+$sql_user_info = "SELECT first_name, last_name FROM users WHERE username = '$username'";
+$user_info = mysqli_query($conn, $sql_user_info);
 
-  $stmt->close();
-  $conn->close();
+if(mysqli_num_rows($user_info) > 0){
+  $rows_user_info = mysqli_fetch_assoc($user_info);
+
+  $first_name = $rows_user_info["first_name"];
+  $last_name = $rows_user_info["last_name"];
+}
+
+//Logout logic
+if (isset($_GET['logout'])) {
+  $_SESSION = array();
+  session_destroy();
+  header("Location: ../index.php");
+  exit;
+}
+
 ?>

@@ -23,6 +23,10 @@ html, body {
   line-height: 1.2;
 }
 
+
+main {
+  min-height: 400px;
+}
 /* Login Page Style */
 .app-name h3 {
   font-family: 'Siyam Rupali', sans-serif;

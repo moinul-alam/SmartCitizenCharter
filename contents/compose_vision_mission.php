@@ -1,6 +1,21 @@
 <?php
 
-require "required/session.php";
+include "required/session.php";
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $vision_statement = $_POST['vision_statement'];
+    $mission_statement = $_POST['mission_statement'];
+
+    $sql_vision = "INSERT INTO vision_mission (vision, mission) VALUES ('$vision_statement', '$mission_statement')";
+
+    if (mysqli_query($conn, $sql_vision)) {
+        header("Location: composition_success.php");
+        exit();
+    } else {
+        echo '<script>alert("তথ্য সংরক্ষণ করা হয়নি, পূনরায় চেষ্টা করুন।");</script>';
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +32,6 @@ require "required/session.php";
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../resources/css/style.css">
-  <script src="../resources/js/includeComponent.js"></script>
 </head>
 
 <body>
@@ -34,7 +48,7 @@ require "required/session.php";
         <p class="alert alert-success fw-bold text-center">১. সিটিজেন্‌স চার্টারের ভিশন ও মিশন প্রণয়ন</p>
       </section>
       <section class="page-content">
-        <form action="composition_success.php" method="POST" class="bg-light p-2 rounded">
+        <form action="" method="POST" class="alert alert-info p-2 rounded">
           <div class="form-group m-2">
             <label for="vision_statement" class="fs-5 p-2">ভিশন</label>
             <textarea name="vision_statement" class="form-control" id="visionStatement" placeholder="ভিশন লিখুন"
@@ -53,7 +67,6 @@ require "required/session.php";
         </form>
       </section>
 
-
     </main>
     <!-- Footer Area -->
     <?php
@@ -65,8 +78,6 @@ require "required/session.php";
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
-  <script src="../resources/js/addrow.js"></script>
-  <!-- <script>addRow(7);</script> -->
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 <?php
-
-require "required/session.php";
+include "required/session.php";
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +16,6 @@ require "required/session.php";
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../resources/css/style.css">
-  <script src="/resources/js/includeComponent.js"></script>
 </head>
 
 <body>

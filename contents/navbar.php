@@ -21,16 +21,16 @@
               <i class="fa-solid fa-house"></i> হোম</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link mx-lg-2 dropdown-toggle" href="charter_composition.php" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link mx-lg-2 dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               <i class="fa-solid fa-file-lines"></i> চার্টার প্রণয়ন
             </a>
             <ul class="dropdown-menu bg-warning fs-5">
               <li class="dropdown-item"><a class="nav-link" href="compose_vision_mission.php">ভিশন ও মিশন
                   প্রণয়ন</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="#">প্রতিশ্রুতি ও সেবাসমূহ</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="#">অভিযোগ প্রতিকার ব্যবস্থাপনা</a></li>
-              <li class="dropdown-item"><a class="nav-link" href="#">আপনার কাছে প্রত্যাশা</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="compose_services.php">প্রতিশ্রুতি ও সেবাসমূহ</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="compose_grs.php">অভিযোগ প্রতিকার ব্যবস্থাপনা</a></li>
+              <li class="dropdown-item"><a class="nav-link" href="compose_expections.php">আপনার কাছে প্রত্যাশা</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -67,6 +67,7 @@
         </ul>
       </div>
     </div>
-    <a class="btn btn-outline-danger fw-bold" href="#"><i class="fa-solid fa-right-from-bracket"></i> লগ আউট</a>
+    <a class="btn btn-outline-danger fw-bold" href="?logout"><i class="fa-solid fa-right-from-bracket"></i> লগ
+      আউট</a>
   </div>
 </nav>
