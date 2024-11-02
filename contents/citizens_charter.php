@@ -33,8 +33,8 @@ include "required/dbconn.php";
           <p class="fw-bold">১. ভিশন ও মিশন</p>
           <div class="ms-4  text-black">
             <?php
-                    $sql_vision = "SELECT vision, mission FROM vision_mission";
-                    $result_vision = mysqli_query($conn, $sql_vision);
+            $sql_vision = "SELECT vision, mission FROM vision_mission";
+            $result_vision = mysqli_query($conn, $sql_vision);
 
             while($row = mysqli_fetch_assoc($result_vision)){
               echo '<p class="mb-1">ভিশনঃ ' . $row['vision'] . '</p>';
